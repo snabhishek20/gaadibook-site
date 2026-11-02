@@ -6,7 +6,7 @@
   <meta name="fast2sms" content="xK2LXxn64o1UAjT5rymBAO7XAuXPjA6t">
   <title>GaadiBook — Two-Wheeler Workshop App</title>
   <meta name="description" content="GaadiBook is a mobile app for two-wheeler service workshops in India: job cards, bills, payments, stock, staff and cashbook in 10 Indian languages.">
-  <!-- Published to GitHub Pages together with privacy.html (a copy of docs/privacy_and_deletion.html). -->
+  <!-- Published to GitHub Pages together with privacy.html (a copy of docs/privacy_and_deletion.html) and terms.html. -->
   <style>
     :root {
       --brand: #FA5A1E;
@@ -52,8 +52,8 @@
     section h2 { font-size: 22px; margin-bottom: 16px; }
     .about { padding-bottom: 48px; }
     .about p { color: var(--text); margin-bottom: 12px; }
-    .otp { padding-bottom: 48px; }
-    .otp > p { color: var(--text); margin-bottom: 20px; }
+    .howto { padding-bottom: 48px; }
+    .howto > p { color: var(--text); margin-bottom: 20px; }
     .phones { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
     .step { text-align: center; max-width: 250px; }
     .step h3 { font-size: 15px; margin-top: 12px; }
@@ -68,11 +68,19 @@
       border: 2px solid var(--border); border-radius: 12px; padding: 12px; font-size: 15px;
       font-weight: 700; margin-bottom: 14px; color: var(--navy);
     }
-    .field.code { border-color: var(--brand); text-align: center; letter-spacing: 8px; }
-    .sent { background: #ECFDF5; color: #047857; border-radius: 10px; padding: 8px 10px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+    .field.code { border-color: var(--brand); text-align: center; letter-spacing: 2px; }
+    .ok { background: #ECFDF5; color: #047857; border-radius: 10px; padding: 8px 10px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
     .btn2 { background: var(--brand); color: #fff; border-radius: 12px; padding: 13px; text-align: center; font-weight: 700; font-size: 14px; }
-    .sms { background: #F1F5F9; border-radius: 14px 14px 14px 4px; padding: 12px; font-size: 13.5px; color: var(--navy); }
-    .sms small { display: block; color: var(--slate); font-size: 11px; margin-bottom: 4px; }
+    .gbtn {
+      display: flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid var(--border);
+      border-radius: 12px; padding: 12px; font-weight: 700; font-size: 14px; color: var(--navy);
+    }
+    .gbtn b { color: #4285F4; font-size: 17px; }
+    .qr { width: 120px; height: 120px; margin: 4px auto 14px; color: var(--navy); display: block; }
+    @media (max-width: 520px) {
+      header .wrap { height: auto; padding-top: 12px; padding-bottom: 12px; flex-wrap: wrap; gap: 8px; }
+      nav a { margin: 0 16px 0 0; }
+    }
     footer { border-top: 1px solid var(--border); background: var(--card); padding: 24px 0; font-size: 13.5px; color: var(--slate); }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
   </style>
@@ -81,7 +89,7 @@
   <header>
     <div class="wrap">
       <a class="brand" href="./"><span class="logo">GB</span>GaadiBook</a>
-      <nav><a href="#otp-login">OTP login</a><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></nav>
+      <nav><a href="#how-it-works">How it works</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="#contact">Contact</a></nav>
     </div>
   </header>
 
@@ -129,45 +137,46 @@
       </div>
     </section>
 
-    <section class="wrap otp" id="otp-login">
-      <h2>Login with mobile OTP</h2>
-      <p>Every owner and staff member signs in to the GaadiBook app with their mobile number. We send a 6-digit one-time password (OTP) by SMS; the app logs in only after our server checks that code. A code works once and expires after 5 minutes.</p>
+    <section class="wrap howto" id="how-it-works">
+      <h2>Sign in with Google, add staff with a QR code</h2>
+      <p>Owners and staff sign in with their own Google account. No passwords or SMS codes to remember. The owner adds staff by showing a live QR code; nobody can join a workshop without the owner's permission.</p>
       <div class="phones">
         <div class="step">
           <div class="phone">
-            <div class="t">Sign in to GaadiBook</div>
-            <label>Mobile Number</label>
-            <div class="field">+91 98XXX XXXXX</div>
-            <div class="btn2">Get SMS OTP</div>
+            <div class="t">Welcome to GaadiBook</div>
+            <div class="gbtn"><b>G</b>Sign in with Google</div>
           </div>
-          <h3>1. Enter mobile number</h3>
-          <p>The user types their 10-digit Indian mobile number and taps Get SMS OTP.</p>
+          <h3>1. Sign in with Google</h3>
+          <p>Tap once and pick your Google account. We receive only your name and email.</p>
         </div>
         <div class="step">
           <div class="phone">
-            <div class="t">Messages</div>
-            <div class="sms"><small>SMS</small>Your OTP: 482913</div>
+            <div class="t">Your details</div>
+            <label>Your name</label>
+            <div class="field">Ravi Kumar</div>
+            <label>Mobile number</label>
+            <div class="field">98XXX XXXXX</div>
+            <div class="btn2">Continue</div>
           </div>
-          <h3>2. OTP arrives by SMS</h3>
-          <p>A one-time code is sent to that number within seconds.</p>
+          <h3>2. Enter your details once</h3>
+          <p>Your name and a contact number for your workshop. Then create your workshop.</p>
         </div>
         <div class="step">
           <div class="phone">
-            <div class="sent">OTP sent to mobile</div>
-            <label>Enter 6-Digit OTP</label>
-            <div class="field code">482913</div>
-            <div class="btn2">Verify &amp; Continue</div>
+            <div class="t">Add staff</div>
+            <svg class="qr" viewBox="0 0 21 21" fill="currentColor" aria-label="QR code"><path d="M0 0h7v7H0zM1 1v5h5V1zM2 2h3v3H2zM14 0h7v7h-7zM15 1v5h5V1zM16 2h3v3h-3zM0 14h7v7H0zM1 15v5h5v-5zM2 16h3v3H2zM8 0h2v2H8zM11 1h2v3h-2zM8 3h2v3H8zM9 8h3v2H9zM13 8h2v3h-2zM16 8h3v2h-3zM8 11h2v2H8zM11 12h2v2h-2zM14 12h3v2h-3zM18 11h3v3h-3zM8 15h3v2H8zM12 15h2v3h-2zM15 15h2v2h-2zM18 16h3v2h-3zM8 18h3v3H8zM15 18h2v3h-2zM0 8h2v2H0zM3 9h3v2H3zM0 11h3v2H0z"/></svg>
+            <div class="ok">&#10003; Joined as Mechanic</div>
           </div>
-          <h3>3. Verify and continue</h3>
-          <p>The user enters the code. Only a correct, unexpired code opens their workshop.</p>
+          <h3>3. Staff scan the owner's QR</h3>
+          <p>The QR changes every minute and works once. Far away? Share a code instead, and approve the request.</p>
         </div>
       </div>
     </section>
 
     <section class="wrap about">
       <h2>Sign-in and your data</h2>
-      <p>Workshop owners and staff sign in with their mobile number and a one-time password (OTP) sent by SMS, or with Google. Each workshop's records are kept separate and are visible only to its own members.</p>
-      <p>Read the full <a href="privacy.html">privacy policy and account deletion steps</a>.</p>
+      <p>Workshop owners and staff sign in with Google. Each workshop's records are kept separate and are visible only to its own members, and each role sees only what it needs.</p>
+      <p>Read the full <a href="privacy.html">privacy policy and account deletion steps</a> and our <a href="terms.html">terms of service</a>.</p>
     </section>
 
     <section class="wrap about" id="contact">
@@ -179,7 +188,7 @@
   <footer>
     <div class="wrap">
       <span>&copy; 2026 GaadiBook</span>
-      <span><a href="privacy.html">Privacy policy &amp; account deletion</a></span>
+      <span><a href="privacy.html">Privacy policy &amp; account deletion</a> &middot; <a href="terms.html">Terms of service</a></span>
     </div>
   </footer>
 </body>

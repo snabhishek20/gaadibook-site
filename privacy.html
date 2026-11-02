@@ -147,36 +147,38 @@
 
       <h2>1. What we store</h2>
       <ul>
-        <li><strong>Your account:</strong> your mobile number, or your Google account email and name if you sign in with Google.</li>
+        <li><strong>Your account:</strong> you sign in with your Google account. From Google we receive only your email address and name; we never see your Google password.</li>
+        <li><strong>Your details:</strong> the name and mobile number you type in once after your first sign-in. The number is a contact number for your workshop. It is not used to sign in or to give access.</li>
         <li><strong>Your workshop:</strong> workshop name, address, phone number, UPI ID, GST details and bill terms.</li>
         <li><strong>Records you enter:</strong> customers and their phone numbers, vehicles and registration numbers, job cards, bills, payments, expenses, stock, staff details (including wages and advances) and vehicle intake / damage photos.</li>
+        <li><strong>Joining a workshop:</strong> when an owner adds staff, we keep the join QR or code only as a one-way fingerprint (never the code itself), who used it and when. Failed join attempts are kept for one day to stop guessing.</li>
       </ul>
       <p>
-        Records are saved on your phone first, so the app works without internet. When you are online they are copied to our cloud, so the other phones of your workshop see the same records.
+        Records are saved to our cloud, so the app needs internet to save. A copy stays on your phone so you can look up records quickly and see them when you are offline. The other phones of your workshop see the same records.
       </p>
 
       <h2>2. Who can see it</h2>
       <p>
-        Only members of your workshop. What each member sees depends on their role: for example, mechanics and helpers do not see payments, cash or wages. Each workshop's records are kept separate from every other workshop's on our servers.
+        Only members of your workshop. A person becomes a member only when the owner (or a partner) lets them in: by showing them a live QR code, or by approving their request after they type a code. What each member sees depends on their role: for example, mechanics and helpers do not see payments, cash or wages. Each workshop's records are kept separate from every other workshop's on our servers.
+        Workshop owners and partners see the name and mobile number of each staff member and of each person asking to join.
         We <strong>never sell</strong> your records or share them for advertising.
       </p>
 
       <h2>3. Services we use</h2>
       <ul>
+        <li><strong>Google Sign-In:</strong> signs you in. Google tells us your email address and name.</li>
         <li><strong>Supabase:</strong> cloud database, sign-in and photo storage.</li>
         <li><strong>Cloudflare R2:</strong> vehicle photo storage. Photos are private and shown only through short-lived links to members of the workshop.</li>
-        <li><strong>Fast2SMS:</strong> sends the one-time login code (OTP) by SMS to your mobile number. It receives only the number and the code.</li>
-        <li><strong>Google Sign-In:</strong> if you choose to sign in with Google.</li>
         <li><strong>Google Gemini:</strong> reads a purchase bill photo only when you use bill scan, to fill in the parts list.</li>
       </ul>
       <p>
-        Number plates are read on the phone, not on a server. All transfers are encrypted (HTTPS).
+        Number plates and join QR codes are read on the phone, not on a server. All transfers are encrypted (HTTPS).
       </p>
       <!-- TODO(owner): name the cloud region where the Supabase project and R2 bucket are hosted. -->
 
       <h2>4. Camera, microphone and storage</h2>
       <ul>
-        <li><em>Camera:</em> scans number plates and purchase bills, and takes vehicle damage photos.</li>
+        <li><em>Camera:</em> scans number plates, purchase bills and workshop join QR codes, and takes vehicle damage photos.</li>
         <li><em>Microphone:</em> turns spoken complaints into text. Audio is not stored by GaadiBook.</li>
         <li><em>Storage:</em> used to share bills and estimates on WhatsApp.</li>
       </ul>
@@ -208,15 +210,16 @@
           <li>Your sign-in account is deleted from our cloud.</li>
           <li>If you are the <strong>only owner</strong> of a workshop, that workshop is deleted for everyone, with all its customers, vehicles, job cards, bills, payments, expenses, staff records and photos.</li>
           <li>If the workshop has another owner, or you are staff, only your membership is removed. The workshop's records stay with the remaining owner.</li>
-          <li>All GaadiBook data on the phone you used is wiped. Changes not yet saved online are lost.</li>
+          <li>Your name and mobile number from Your details are deleted.</li>
+          <li>All GaadiBook data on the phone you used is wiped.</li>
         </ul>
         <p>Deletion needs internet. If it fails, the app tells you and nothing is wiped, so you can try again.</p>
 
         <p><strong>Option B — By email (if you no longer have the app):</strong></p>
         <p>
-          Send a request from your registered mobile number or Google email. We delete the account and data within <strong>30 days</strong>.
+          Send a request from the Google email you sign in with. We delete the account and data within <strong>30 days</strong>.
         </p>
-        <a class="btn" href="mailto:gaadibook.team@gmail.com?subject=Account%20and%20Data%20Deletion%20Request&body=Hello%20GaadiBook%20Team%2C%0A%0APlease%20permanently%20delete%20my%20account%20and%20all%20associated%20workshop%20data.%0A%0ARegistered%20Phone%20Number%3A%20%2B91%20%0ARegistered%20Email%20(if%20Google%20linked)%3A%20%0AWorkshop%20Name%3A%20%0A%0AThank%20you.">
+        <a class="btn" href="mailto:gaadibook.team@gmail.com?subject=Account%20and%20Data%20Deletion%20Request&body=Hello%20GaadiBook%20Team%2C%0A%0APlease%20permanently%20delete%20my%20account%20and%20all%20associated%20workshop%20data.%0A%0AGoogle%20Email%20I%20sign%20in%20with%3A%20%0AMobile%20Number%3A%20%2B91%20%0AWorkshop%20Name%3A%20%0A%0AThank%20you.">
           Submit Deletion Request via Email
         </a>
       </div>
@@ -232,7 +235,7 @@
     </section>
 
     <div class="footer">
-      <p>&copy; 2026 GaadiBook. All rights reserved.</p>
+      <p>&copy; 2026 GaadiBook. All rights reserved. &middot; <a href="terms.html">Terms of Service</a></p>
       <p>For privacy inquiries or technical support, contact: <strong>gaadibook.team@gmail.com</strong></p>
     </div>
   </div>
