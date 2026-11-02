@@ -51,6 +51,27 @@
     section h2 { font-size: 22px; margin-bottom: 16px; }
     .about { padding-bottom: 48px; }
     .about p { color: var(--text); margin-bottom: 12px; }
+    .otp { padding-bottom: 48px; }
+    .otp > p { color: var(--text); margin-bottom: 20px; }
+    .phones { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .step { text-align: center; max-width: 250px; }
+    .step h3 { font-size: 15px; margin-top: 12px; }
+    .step p { color: var(--slate); font-size: 13.5px; }
+    .phone {
+      width: 230px; background: var(--card); border: 8px solid var(--navy); border-radius: 30px;
+      padding: 22px 16px; text-align: left; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    }
+    .phone .t { font-weight: 800; font-size: 15px; margin-bottom: 14px; }
+    .phone label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 6px; }
+    .field {
+      border: 2px solid var(--border); border-radius: 12px; padding: 12px; font-size: 15px;
+      font-weight: 700; margin-bottom: 14px; color: var(--navy);
+    }
+    .field.code { border-color: var(--brand); text-align: center; letter-spacing: 8px; }
+    .sent { background: #ECFDF5; color: #047857; border-radius: 10px; padding: 8px 10px; font-size: 12px; font-weight: 600; margin-bottom: 14px; }
+    .btn2 { background: var(--brand); color: #fff; border-radius: 12px; padding: 13px; text-align: center; font-weight: 700; font-size: 14px; }
+    .sms { background: #F1F5F9; border-radius: 14px 14px 14px 4px; padding: 12px; font-size: 13.5px; color: var(--navy); }
+    .sms small { display: block; color: var(--slate); font-size: 11px; margin-bottom: 4px; }
     footer { border-top: 1px solid var(--border); background: var(--card); padding: 24px 0; font-size: 13.5px; color: var(--slate); }
     footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
   </style>
@@ -59,7 +80,7 @@
   <header>
     <div class="wrap">
       <a class="brand" href="./"><span class="logo">GB</span>GaadiBook</a>
-      <nav><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></nav>
+      <nav><a href="#otp-login">OTP login</a><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></nav>
     </div>
   </header>
 
@@ -103,6 +124,41 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
           <h3>10 Indian languages</h3>
           <p>English, हिन्दी, മലയാളം, தமிழ், తెలుగు, ಕನ್ನಡ, मराठी, বাংলা, ગુજરાતી and ਪੰਜਾਬੀ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap otp" id="otp-login">
+      <h2>Login with mobile OTP</h2>
+      <p>Every owner and staff member signs in to the GaadiBook app with their mobile number. We send a 6-digit one-time password (OTP) by SMS; the app logs in only after our server checks that code. A code works once and expires after 5 minutes.</p>
+      <div class="phones">
+        <div class="step">
+          <div class="phone">
+            <div class="t">Sign in to GaadiBook</div>
+            <label>Mobile Number</label>
+            <div class="field">+91 98XXX XXXXX</div>
+            <div class="btn2">Get SMS OTP</div>
+          </div>
+          <h3>1. Enter mobile number</h3>
+          <p>The user types their 10-digit Indian mobile number and taps Get SMS OTP.</p>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="t">Messages</div>
+            <div class="sms"><small>SMS</small>Your OTP: 482913</div>
+          </div>
+          <h3>2. OTP arrives by SMS</h3>
+          <p>A one-time code is sent to that number within seconds.</p>
+        </div>
+        <div class="step">
+          <div class="phone">
+            <div class="sent">OTP sent to mobile</div>
+            <label>Enter 6-Digit OTP</label>
+            <div class="field code">482913</div>
+            <div class="btn2">Verify &amp; Continue</div>
+          </div>
+          <h3>3. Verify and continue</h3>
+          <p>The user enters the code. Only a correct, unexpired code opens their workshop.</p>
         </div>
       </div>
     </section>
