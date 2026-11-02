@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaadiBook — Two-Wheeler Workshop App</title>
+  <meta name="description" content="GaadiBook is a mobile app for two-wheeler service workshops in India: job cards, bills, payments, stock, staff and cashbook in 10 Indian languages.">
+  <!-- Published to GitHub Pages together with privacy.html (a copy of docs/privacy_and_deletion.html). -->
+  <style>
+    :root {
+      --brand: #FA5A1E;
+      --brand-dark: #DD450D;
+      --navy: #0F172A;
+      --slate: #64748B;
+      --text: #334155;
+      --bg: #F8FAFC;
+      --card: #FFFFFF;
+      --border: #E2E8F0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+      line-height: 1.6;
+    }
+    a { color: var(--brand-dark); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+    header { background: var(--card); border-bottom: 1px solid var(--border); }
+    header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; text-decoration: none; color: var(--navy); }
+    .logo {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+      color: #fff; display: grid; place-items: center; font-weight: 900; font-size: 15px;
+    }
+    nav a { color: var(--slate); text-decoration: none; font-weight: 600; font-size: 14px; margin-left: 16px; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero h1 { font-size: clamp(28px, 6vw, 44px); line-height: 1.15; letter-spacing: -0.5px; }
+    .hero h1 span { color: var(--brand); }
+    .hero p { color: var(--text); font-size: 17px; max-width: 620px; margin: 16px auto 0; }
+    .pill {
+      display: inline-block; margin-top: 24px; padding: 10px 20px; border-radius: 999px;
+      background: var(--navy); color: #fff; font-weight: 700; font-size: 14px;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; padding-bottom: 48px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .card h3 { font-size: 16px; margin-bottom: 6px; }
+    .card p { color: var(--text); font-size: 14.5px; }
+    .icon { width: 28px; height: 28px; color: var(--brand); margin-bottom: 10px; }
+    section h2 { font-size: 22px; margin-bottom: 16px; }
+    .about { padding-bottom: 48px; }
+    .about p { color: var(--text); margin-bottom: 12px; }
+    footer { border-top: 1px solid var(--border); background: var(--card); padding: 24px 0; font-size: 13.5px; color: var(--slate); }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="./"><span class="logo">GB</span>GaadiBook</a>
+      <nav><a href="privacy.html">Privacy</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>Run your two-wheeler workshop<br><span>from your phone</span></h1>
+        <p>GaadiBook is a simple Android app for bike and scooter service workshops in India. Job cards, bills, payments, stock, staff and the daily cashbook in one place, in your own language.</p>
+        <span class="pill">Coming soon on Google Play</span>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="grid">
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+          <h3>Job cards in seconds</h3>
+          <p>Scan the number plate, pick complaints with one tap or speak them, and take damage photos at intake.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg>
+          <h3>Bills and payments</h3>
+          <p>GST or simple bills, UPI or cash, part payments and old dues. Share the bill on WhatsApp.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
+          <h3>Stock and purchases</h3>
+          <p>Keep spare-parts stock and scan purchase bills to fill the parts list.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 15c3 0 5 2 5 5"/></svg>
+          <h3>Staff and roles</h3>
+          <p>Add mechanics and helpers. Each role sees only what it needs; wages and advances stay with the owner.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h3"/></svg>
+          <h3>Daily cashbook</h3>
+          <p>Today's income and expense at a glance, split by cash and UPI.</p>
+        </div>
+        <div class="card">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+          <h3>10 Indian languages</h3>
+          <p>English, हिन्दी, മലയാളം, தமிழ், తెలుగు, ಕನ್ನಡ, मराठी, বাংলা, ગુજરાતી and ਪੰਜਾਬੀ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap about">
+      <h2>Sign-in and your data</h2>
+      <p>Workshop owners and staff sign in with their mobile number and a one-time password (OTP) sent by SMS, or with Google. Each workshop's records are kept separate and are visible only to its own members.</p>
+      <p>Read the full <a href="privacy.html">privacy policy and account deletion steps</a>.</p>
+    </section>
+
+    <section class="wrap about" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:support@gaadibook.app">support@gaadibook.app</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 GaadiBook</span>
+      <span><a href="privacy.html">Privacy policy &amp; account deletion</a></span>
+    </div>
+  </footer>
+</body>
+</html>

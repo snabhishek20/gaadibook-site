@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GaadiBook — Privacy Policy & Account Deletion</title>
+  <style>
+    :root {
+      --primary: #FA5A1E;
+      --primary-dark: #DD450D;
+      --navy: #0F172A;
+      --slate: #64748B;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--navy);
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+      border: 1px solid var(--border);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      border-radius: 18px;
+      color: white;
+      font-size: 28px;
+      font-weight: 900;
+      box-shadow: 0 8px 16px rgba(250, 90, 30, 0.25);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 26px;
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--navy);
+      margin: 28px 0 12px 0;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #F1F5F9;
+    }
+    p, li {
+      font-size: 14.5px;
+      color: #334155;
+      margin-bottom: 12px;
+    }
+    ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      background: #EFF6FF;
+      color: #2563EB;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+    .deletion-box {
+      background: #FFF7ED;
+      border: 1.5px solid #FFEDD5;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .deletion-box h3 {
+      font-size: 17px;
+      color: #C2410C;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 12px;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #1E293B;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 36px;
+      font-size: 12.5px;
+      color: var(--slate);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <div class="logo-badge">GB</div>
+      <h1>GaadiBook — Privacy Policy</h1>
+      <span class="badge">Last Updated: November 2026</span>
+      <p style="margin-top: 8px; color: var(--slate); font-size: 13.5px;">
+        Automotive Two-Wheeler Workshop Operating System
+      </p>
+    </div>
+
+    <!-- PRIVACY POLICY SECTION (keep in step with lib/core/localization/translations/privacy_strings.dart) -->
+    <section>
+      <p><span class="badge">Last updated: 2 November 2026</span></p>
+
+      <h2>1. What we store</h2>
+      <ul>
+        <li><strong>Your account:</strong> your mobile number, or your Google account email and name if you sign in with Google.</li>
+        <li><strong>Your workshop:</strong> workshop name, address, phone number, UPI ID, GST details and bill terms.</li>
+        <li><strong>Records you enter:</strong> customers and their phone numbers, vehicles and registration numbers, job cards, bills, payments, expenses, stock, staff details (including wages and advances) and vehicle intake / damage photos.</li>
+      </ul>
+      <p>
+        Records are saved on your phone first, so the app works without internet. When you are online they are copied to our cloud, so the other phones of your workshop see the same records.
+      </p>
+
+      <h2>2. Who can see it</h2>
+      <p>
+        Only members of your workshop. What each member sees depends on their role: for example, mechanics and helpers do not see payments, cash or wages. Each workshop's records are kept separate from every other workshop's on our servers.
+        We <strong>never sell</strong> your records or share them for advertising.
+      </p>
+
+      <h2>3. Services we use</h2>
+      <ul>
+        <li><strong>Supabase:</strong> cloud database, sign-in and photo storage.</li>
+        <li><strong>Cloudflare R2:</strong> vehicle photo storage. Photos are private and shown only through short-lived links to members of the workshop.</li>
+        <li><strong>Fast2SMS:</strong> sends the one-time login code (OTP) by SMS to your mobile number. It receives only the number and the code.</li>
+        <li><strong>Google Sign-In:</strong> if you choose to sign in with Google.</li>
+        <li><strong>Google Gemini:</strong> reads a purchase bill photo only when you use bill scan, to fill in the parts list.</li>
+      </ul>
+      <p>
+        Number plates are read on the phone, not on a server. All transfers are encrypted (HTTPS).
+      </p>
+      <!-- TODO(owner): name the cloud region where the Supabase project and R2 bucket are hosted. -->
+
+      <h2>4. Camera, microphone and storage</h2>
+      <ul>
+        <li><em>Camera:</em> scans number plates and purchase bills, and takes vehicle damage photos.</li>
+        <li><em>Microphone:</em> turns spoken complaints into text. Audio is not stored by GaadiBook.</li>
+        <li><em>Storage:</em> used to share bills and estimates on WhatsApp.</li>
+      </ul>
+      <p>Nothing is captured unless you start it.</p>
+
+      <h2>5. Your customers' details</h2>
+      <p>
+        Customer names, phone numbers and vehicle numbers are entered by your workshop. Your workshop decides what to keep and is responsible for telling its customers. We store these details only to run the app for you.
+      </p>
+
+      <h2>6. How long we keep data</h2>
+      <p>
+        We keep your records while your account is active. When you delete your account, the records are removed from our live database at once, as described below. Copies in our providers' routine backups are overwritten on their normal backup cycle.
+      </p>
+    </section>
+
+    <!-- MANDATORY GOOGLE PLAY ACCOUNT DELETION SECTION -->
+    <section id="delete-account">
+      <h2>7. Deleting your account</h2>
+
+      <div class="deletion-box">
+        <h3>🗑️ Delete your account and data</h3>
+
+        <p><strong>Option A — In the app:</strong></p>
+        <p>
+          Open GaadiBook &rarr; <strong>Account</strong> &rarr; <strong>Delete Account &amp; Data</strong>. This is available to every member, owner or staff.
+        </p>
+        <ul>
+          <li>Your sign-in account is deleted from our cloud.</li>
+          <li>If you are the <strong>only owner</strong> of a workshop, that workshop is deleted for everyone, with all its customers, vehicles, job cards, bills, payments, expenses, staff records and photos.</li>
+          <li>If the workshop has another owner, or you are staff, only your membership is removed. The workshop's records stay with the remaining owner.</li>
+          <li>All GaadiBook data on the phone you used is wiped. Changes not yet saved online are lost.</li>
+        </ul>
+        <p>Deletion needs internet. If it fails, the app tells you and nothing is wiped, so you can try again.</p>
+
+        <p><strong>Option B — By email (if you no longer have the app):</strong></p>
+        <p>
+          Send a request from your registered mobile number or Google email. We delete the account and data within <strong>30 days</strong>.
+        </p>
+        <a class="btn" href="mailto:support@gaadibook.app?subject=Account%20and%20Data%20Deletion%20Request&body=Hello%20GaadiBook%20Team%2C%0A%0APlease%20permanently%20delete%20my%20account%20and%20all%20associated%20workshop%20data.%0A%0ARegistered%20Phone%20Number%3A%20%2B91%20%0ARegistered%20Email%20(if%20Google%20linked)%3A%20%0AWorkshop%20Name%3A%20%0A%0AThank%20you.">
+          Submit Deletion Request via Email
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>8. Your rights, questions and complaints</h2>
+      <p>
+        Under India's Digital Personal Data Protection Act, 2023 you can ask to see, correct or delete your personal data, and raise a complaint. Write to <strong>support@gaadibook.app</strong>. We reply within 30 days.
+        If you are not satisfied with our reply, you can approach the Data Protection Board of India.
+      </p>
+      <!-- TODO(owner): add the Grievance Officer's name and postal address. -->
+    </section>
+
+    <div class="footer">
+      <p>&copy; 2026 GaadiBook. All rights reserved.</p>
+      <p>For privacy inquiries or technical support, contact: <strong>support@gaadibook.app</strong></p>
+    </div>
+  </div>
+
+</body>
+</html>
